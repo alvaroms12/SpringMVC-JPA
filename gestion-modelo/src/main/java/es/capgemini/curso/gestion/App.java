@@ -19,13 +19,15 @@ public class App {
 		
 		Categoria cat1 = repository.findById(1).get();
 		
+		Long cat2 = repository.count();
+		System.out.println("Total de categorias: " + cat2);
 		System.out.println(cat1);
 		
 		ProductoDAO pRepository = context.getBean(ProductoDAO.class);
 		
 		Producto prod1 = pRepository.findById(2).get();
 		
-		System.out.println("\n\n" + prod1);
+		System.out.println("\nProducto1:\n" + prod1);
 
 		// Cerrar y liberar contexto
 		context.close();

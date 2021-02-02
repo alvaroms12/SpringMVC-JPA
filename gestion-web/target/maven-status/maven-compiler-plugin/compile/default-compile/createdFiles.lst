@@ -1,0 +1,4 @@
+es\capgemini\curso\gestion\web\config\ComponentesWeb.class
+es\capgemini\curso\gestion\web\config\ComponentesNoWeb.class
+es\capgemini\curso\gestion\web\ControllerWeb.class
+es\capgemini\curso\gestion\web\config\SpringInitializer.class
