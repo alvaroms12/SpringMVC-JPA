@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import es.capgemini.curso.gestion.model.CategoriaDAO;
@@ -26,23 +27,9 @@ public class ControllerWeb {
 		return new ModelAndView("categoria", "categoria", categoria.findAll());
 	}
 
-	@GetMapping(path = { "/categoria/{idCategoria}" })
-	public ModelAndView detallesCategoria(@PathVariable("idCategoria") int idCategoria) {
-		ModelAndView mv = new ModelAndView();
-
-		mv.addObject("categoria", categoria.findById(idCategoria).get().getProductos());
-		mv.setViewName("categoria");
-
-		return mv;
+	@GetMapping(path = { "/mostrar" })
+	public ModelAndView detallesCategoria(@RequestParam("idcategoria") int id) {
+		return new ModelAndView("producto", "categoria", categoria.findById(id).get().getProductos());
 	}
 
-	/*
-	 * @PostMapping("/categoria") public ModelAndView
-	 * procesarCategoria(@RequestParam("idCategoria") int id) { return new
-	 * ModelAndView("list-productos", "categoria", categoria.findById(id)); }
-	 * deducir conclusiones y problemas
-	 * @GetMapping("/productos") public ModelAndView
-	 * mostrarProductos(@RequestParam("idCategoria") int id) { return new
-	 * ModelAndView("list-productos", "producto", producto.findById(id).get()); }
-	 */
 }
