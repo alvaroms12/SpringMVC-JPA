@@ -30,7 +30,7 @@
 						</tr>
 
 						<!-- Iterar sobre el atributo del modelo candidatos -->
-						<c:forEach var="productos" items="${productos}">
+						<c:forEach var="categoria" items="${categoria}">
 							<tr>
 								<td>Producto ${productos.idproducto}</td>
 							</tr>
