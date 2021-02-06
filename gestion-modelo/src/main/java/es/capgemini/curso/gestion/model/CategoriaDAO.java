@@ -8,7 +8,4 @@ import es.capgemini.curso.gestion.model.entities.Categoria;
 @Repository
 public interface CategoriaDAO extends JpaRepository<Categoria, Integer>{
 	
-	
-	
-	
 }

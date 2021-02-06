@@ -18,8 +18,6 @@ public class ControllerWeb {
 	@Autowired
 	private CategoriaDAO categoria;
 
-	@Autowired
-	private ProductoDAO producto;
 
 	@GetMapping(path = { "/", "/categoria" })
 	public ModelAndView index() {
@@ -29,7 +27,7 @@ public class ControllerWeb {
 
 	@GetMapping(path = { "/mostrar" })
 	public ModelAndView detallesCategoria(@RequestParam("idcategoria") int id) {
-		return new ModelAndView("producto", "categoria", categoria.findById(id).get().getProductos());
+		return new ModelAndView("producto", "categoria", categoria.findById(id).get().getProductos().get(id));
 	}
 
 }

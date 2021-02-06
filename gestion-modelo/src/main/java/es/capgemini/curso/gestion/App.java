@@ -28,6 +28,11 @@ public class App {
 		Producto prod1 = pRepository.findById(2).get();
 		
 		System.out.println("\nProducto1:\n" + prod1);
+		
+		Categoria cat3 = repository.findById(2).get();
+		for (int i = 0; i < cat3.getProductos().size(); i++) {
+			System.out.println("nombre producto: " + cat3.getProductos().get(i).getNombre());
+		}
 
 		// Cerrar y liberar contexto
 		context.close();
