@@ -29,10 +29,10 @@
 							<th></th>
 						</tr>
 
-						<!-- Iterar sobre el atributo del modelo candidatos -->
+						<!-- Iterar sobre el atributo del modelo categproa -->
 						<c:forEach var="categoria" items="${categoria}">
 
-							<!-- Generar enlace para actualizar con el id del candidato-->
+							<!-- Generar enlace para actualizar con el id de la categoria-->
 							<c:url var="productLink" value="/mostrar">
 								<c:param name="idcategoria" value="${categoria.idcategoria}" />
 							</c:url>

@@ -29,10 +29,13 @@
 							<th></th>
 						</tr>
 
-						<!-- Iterar sobre el atributo del modelo candidatos -->
-						<c:forEach var="categoria" items="${categoria.producto}">
+						<!-- Iterar sobre el atributo del modelo productos -->
+						<c:forEach var="producto" items="${productos}">
 							<tr>
-								<td>Producto ${categoria.producto.nombre}</td>
+								<td>Producto ID ${producto.idproducto}</td>
+								<td>Producto nombre ${producto.nombre}</td>
+								<td>Producto precio ${producto.precio}</td>
+								<td>Producto unidades ${producto.unidades}</td>
 							</tr>
 						</c:forEach>
 

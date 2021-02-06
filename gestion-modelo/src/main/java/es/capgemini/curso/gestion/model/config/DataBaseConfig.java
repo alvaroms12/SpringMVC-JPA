@@ -9,6 +9,9 @@ import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.LocalEntityManagerFactoryBean;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
+/* 
+ * Configuración de la conexión de la BBDD
+ */
 @Configuration
 @EnableTransactionManagement
 @EnableJpaRepositories(basePackages = { "es.capgemini.curso.gestion.model" })
