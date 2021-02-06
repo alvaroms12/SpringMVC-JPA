@@ -11,6 +11,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
+/*
+ * Creación de la entidad Categoría, los parámetros son exactamente los mismos que en la BBDD para que no haya error a la hora de 
+ * importar los datos de la BBDD a este programa
+ */
 @Entity
 public class Categoria implements Serializable{
 

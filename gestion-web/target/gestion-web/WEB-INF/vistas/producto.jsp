@@ -16,11 +16,11 @@
 <body>
 	<div class="container">
 		<div class="col-md-offset-1 col-md-10">
-			<h2>Categoria</h2>
+			<h2>Productos</h2>
 			<hr />
 			<div class="panel panel-info">
 				<div class="panel-heading">
-					<div class="panel-title">Lista de Categorias</div>
+					<div class="panel-title">Lista de Productos</div>
 				</div>
 				<div class="panel-body">
 					<table class="table table-striped table-bordered">
@@ -29,24 +29,14 @@
 							<th></th>
 						</tr>
 
-						<!-- Iterar sobre el atributo del modelo categproa -->
-						<c:forEach var="categoria" items="${categoria}">
-
-							<!-- Generar enlace para actualizar con el id de la categoria-->
-							<c:url var="productLink" value="/mostrar">
-								<c:param name="idcategoria" value="${categoria.idcategoria}" />
-							</c:url>
-
+						<!-- Iterar sobre el atributo del modelo productos -->
+						<c:forEach var="producto" items="${productos}">
 							<tr>
-								<td>Categoría ${categoria.idcategoria}</td>
-
-								<td>
-									<!-- Mostrar enlace para mostrar categorias --> 
-									<a href="${productLink}">Ver Productos</a>
-								</td>
-
+								<td>Producto ID ${producto.idproducto}</td>
+								<td>Producto nombre ${producto.nombre}</td>
+								<td>Producto precio ${producto.precio}</td>
+								<td>Producto unidades ${producto.unidades}</td>
 							</tr>
-
 						</c:forEach>
 
 					</table>
