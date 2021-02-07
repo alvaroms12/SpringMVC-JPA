@@ -32,10 +32,10 @@
 						<!-- Iterar sobre el atributo del modelo productos -->
 						<c:forEach var="producto" items="${productos}">
 							<tr>
-								<td>Producto ID ${producto.idproducto}</td>
-								<td>Producto nombre ${producto.nombre}</td>
-								<td>Producto precio ${producto.precio}</td>
-								<td>Producto unidades ${producto.unidades}</td>
+								<td>Producto ID: ${producto.idproducto}</td>
+								<td>Producto nombre: ${producto.nombre}</td>
+								<td>Producto precio: ${producto.precio}</td>
+								<td>Producto unidades: ${producto.unidades}</td>
 							</tr>
 						</c:forEach>
 

@@ -35,7 +35,7 @@ public class ControllerWeb {
 	 */
 	@GetMapping(path = { "/mostrar" })
 	public ModelAndView detallesCategoria(@RequestParam("idcategoria") int id) {
-		return new ModelAndView("producto", "categoria", categoria.findById(id).get().getProductos());
+		return new ModelAndView("producto", "productos", categoria.findById(id).get().getProductos());
 	}
 
 }
